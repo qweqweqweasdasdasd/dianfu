@@ -10,13 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/reids',function(){
-	$redis = New Redis();
-	$result = $redis->connect('localhost','6379');
-
-	var_dump($result);
+Route::get('memcache', function(){
+	$memcache = new Memcache;             
+	$memcache->connect('127.0.0.1', 11211); //连接Memcached服务器
+	$memcache->set('key', 'memcache ok');        
+	$get_value = $memcache->get('key');   
+	echo $get_value;
 });
+
+Route::get('redis', 'Admin\RedisController@index');
 
 Route::get('/',function(){
 	return redirect('login');

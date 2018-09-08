@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9bc6b6042e3f0cee828324b8c970795",
+    "content-hash": "381c667796116560f7a4adb031b03bd2",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1033,20 +1033,20 @@
         },
         {
             "name": "predis/predis",
-            "version": "v1.0.4",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f"
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/9ead747663bb1b1ae017dfa0d152aca87792b42f",
-                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -1079,7 +1079,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2016-05-30T15:25:52+00:00"
+            "time": "2016-06-16T16:22:20+00:00"
         },
         {
             "name": "psr/http-message",
