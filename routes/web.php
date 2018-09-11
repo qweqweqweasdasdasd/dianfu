@@ -10,15 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('memcache', function(){
-	$memcache = new Memcache;             
-	$memcache->connect('127.0.0.1', 11211); //连接Memcached服务器
-	$memcache->set('key', 'memcache ok');        
-	$get_value = $memcache->get('key');   
-	echo $get_value;
-});
-
-Route::get('redis', 'Admin\RedisController@index');
 
 Route::get('/',function(){
 	return redirect('login');
@@ -109,6 +100,12 @@ Route::group(['middleware'=>'auth:back'],function(){
 		//后台管理--数据回滚(物理)
 		Route::post('/rollback','Admin\ServerController@rollback');
 
+		//后台管理--模拟get请求
+		Route::get('/http','Admin\HttpController@http');
+		//后台管理--http请求
+		Route::post('/upload','Admin\HttpController@upload');
+		//后台管理--http请求操作
+		Route::post('/todo','Admin\HttpController@todo');
 
 		////////////////////////////////////////////回访管理//////////////////////////////////////////
 		//后台管理--工作流显示

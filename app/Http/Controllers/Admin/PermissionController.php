@@ -25,7 +25,7 @@ class PermissionController extends Controller
       if(!$tree = Cache::get('permission')){
 
     	   $tree = $this->permissionRepository->getPermissionTree();
-         Cache::store('memcached')->put('permission',$tree,10);
+         Cache::store('file')->put('permission',$tree,10);
       };
       
     	return view('admin.permission.index',compact('tree'));
